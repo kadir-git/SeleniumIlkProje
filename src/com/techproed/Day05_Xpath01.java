@@ -15,14 +15,14 @@ public class Day05_Xpath01 {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("http://a.testaddressbook.com//sign_in/");
-        //xpath'i giriyoruz
+        //      //input[@type='email'] -> xpath'i giriyoruz
         WebElement emailKutusu = driver.findElement(By.xpath("//input[@type='email']"));
         emailKutusu.sendKeys("testtechproed@gmail.com");
 
         WebElement sifreKutusu = driver.findElement(By.xpath("//input[@type='password']"));
         sifreKutusu.sendKeys("Test1234!");
 
- //       WebElement asd = driver.findElement(By.xpath("//input[@type='submit']"));
-
+        WebElement signInButonu = driver.findElement(By.xpath("//input[@type='submit']"));
+        signInButonu.click();
     }
 }
