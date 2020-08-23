@@ -22,13 +22,22 @@ public class Day06_Facebook {
         WebElement passKutusu = driver.findElement(By.xpath("//input[@type='password']"));
         passKutusu.sendKeys("Test1234");
 
-        //WebElement loginButonu = driver.findElement(By.cssSelector("#u_0_d"));
-        WebElement loginButonu = driver.findElement(By.xpath("//button"));
-        loginButonu.click();
+        passKutusu.submit();
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+
+        }
+
+        // WebElement loginButonu = driver.findElement(By.cssSelector("#u_0_d"));
+        // WebElement loginButonu = driver.findElement(By.xpath("//button"));
+        // loginButonu.click();
 
         try {
             Thread.sleep(25000);
         } catch (InterruptedException e) {
+
         }
 
 
