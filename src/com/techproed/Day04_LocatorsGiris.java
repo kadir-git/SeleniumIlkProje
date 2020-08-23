@@ -25,7 +25,8 @@ public class Day04_LocatorsGiris {
         WebElement sifreKutusu = driver.findElement(By.id("session_password"));
         sifreKutusu.sendKeys("Test1234!");
 
-
+        WebElement signInButonu = driver.findElement(By.name("commit"));
+        signInButonu.click();
 
 
     }
